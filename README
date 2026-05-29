@@ -1,68 +1,147 @@
-# 🚗 Proyecto Final – Análisis y Visualización de Datos de Vehículos  
-Bootcamp Data Science – Hackademy  
-Autora: **Dahiana Zuliani**
+•	ÍNDICE
+1.	Introducción
+2.	Sección 1 – Python: Calidad y Preparación de Datos
+2.1 Ingesta del Dataset
+2.2 Análisis Exploratorio de Datos (EDA)
+2.3 Transformaciones Aplicadas
+2.4 Visualizaciones
+2.5 Conclusión de la Sección 1
+3.	Sección 2 – Power BI: Herramientas de Data Viz
+3.1 Importación y Preparación en Power Query
+3.2 Transformaciones Solicitadas
+3.3 Creación de Medidas DAX
+3.4 Visualizaciones del Dashboard
+3.5 Pruebas con Otros Tipos de Gráficos
+3.6 Conclusión de la Sección 2
+4.	Conclusión General del Proyecto
 
----
+•	INTRODUCCIÓN
+El presente informe corresponde al Proyecto Integrador del módulo de Python y Power BI del Bootcamp de Data Analytics. El objetivo principal es aplicar técnicas de calidad de datos, preparación, análisis exploratorio y visualización, utilizando dos herramientas fundamentales: Python (Pandas, Matplotlib y Seaborn) y Power BI Desktop.
+El proyecto se divide en dos secciones:
+•	Sección 1: Limpieza, análisis y visualización del dataset car_evaluation.xlsx mediante Python.
+•	Sección 2: Preparación, transformación y visualización del dataset car_evaluation_new.xlsx mediante Power BI.
+El resultado final integra ambas partes en un análisis coherente y visualmente claro sobre las características y evaluaciones de vehículos.
 
-# SECCIÓN 1 – PYTHON
-
+SECCIÓN 1 – PYTHON: Calidad y Preparación de Datos
+2.1 Ingesta del Dataset Grafico 1 y Grafico 2
+Se utilizó la librería Pandas para cargar el archivo car_evaluation.xlsx.
+El dataset contiene información categórica sobre vehículos, incluyendo precio de compra, mantenimiento, número de puertas, capacidad de personas, tamaño del maletero, nivel de seguridad y clasificación final
 ### 📊 Gráfico 1 – Ingesta del Dataset  
-![Gráfico 1 - Ingesta del Dataset](IMG/Gráfico 1 - Ingesta del DAtaset.png)
-
----
-
+![Gráfico 1 - Ingesta del Dataset](img/Grafico 1- Ingesta del DAtaset.png)
 ### 📊 Gráfico 2 – Ingesta del Dataset (segunda vista)  
-![Grafico 2 Ingesta del Dataset](IMG/Grafico 2 Ingesta del Dataset.png)
+![Grafico 2 Ingesta del Dataset](img/Grafico 2 Ingesta del Dataset.png)
 
----
-
+Análisis Exploratorio de Datos (EDA)
+Se analizaron:
+•	Dimensiones del dataset
+•	Tipos de datos
+•	Valores únicos por columna
+•	Distribución de la variable objetivo class
+•	Presencia de valores nulos
+Principales hallazgos: Grafico 3
+•	El dataset no contiene valores nulos.
+•	Todas las columnas son categóricas.
+•	La variable objetivo class está desbalanceada, predominando la categoría “unacc”.
+•	Las categorías tienen una estructura ordinal en algunas columnas (buying, maint, safety).
 ### 📊 Gráfico 3 – EDA  
-![Grafico 3 EDA](IMG/Grafico 3 EDA.png)
+![Grafico 3 EDA](img/Grafico 3 EDA.png)
 
----
-
+Transformaciones Aplicadas- Grafico 4
+Además del renombrado de columnas solicitado:
+•	Se creó una versión numérica de doors y persons para facilitar análisis posteriores.
+•	Se ordenaron las categorías de buying y maint según su nivel (low < med < high < vhigh).
+Estas transformaciones mejoran la calidad del dataset y permiten análisis más precisos.
 ### 📊 Gráfico 4 – Transformaciones aplicadas  
-![Grafico 4 Trasformaciones aplicadas](IMG/Grafico 4 Trasformaciones aplicadas.png)
+![Grafico 4 Trasformaciones aplicadas](img/Grafico 4 Trasformaciones aplicadas.png)
+
+Visualizaciones- grafico 5 y grafico 6
+Se generaron al menos tres visualizaciones utilizando Matplotlib y Seaborn.
+Gráfico 1: Distribución de la variable “class”
+Interpretación: La mayoría de los vehículos están clasificados como “unacc”, indicando baja aceptación general.
+Gráfico 2: Seguridad vs Clase
+Interpretación: Los vehículos con mayor nivel de seguridad tienden a obtener mejores clasificaciones.
+Gráfico 3: Precio de compra vs Clase
+Interpretación: Los vehículos con precios más bajos suelen tener mejores evaluaciones, lo que sugiere una relación entre costo y percepción de valor.
+
+## 📌 Gráfico 5 – Visualizaciones  
+Distribución de niveles de seguridad.
+
+![Gráfico 5 Visualizaciones](img/Grafico 5 Visualizaciones.png)
 
 ---
 
-### 📊 Gráfico 5 – Visualizaciones  
-![Grafico 5 Visualizaciones](IMG/Grafico 5 Visualizaciones.png)
+## 📌 Gráfico 6 – Visualizaciones  
+Relación entre tamaño del maletero y clase del vehículo.
 
----
+![Gráfico 6 Visualizaciones](img/Grafico 6 Visualizaciones.png)
 
-### 📊 Gráfico 6 – Visualizaciones  
-![Grafico 6 Visualizaciones](IMG/Grafico 6 Visualizaciones.png)
+Conclusión de la Sección 1
+La primera parte del proyecto permitió evaluar la calidad del dataset, identificar patrones relevantes y aplicar transformaciones necesarias para mejorar su estructura. Las visualizaciones confirmaron relaciones claras entre seguridad, precio y clasificación del vehículo. Python resultó fundamental para explorar y preparar los datos de manera eficiente.
 
----
+SECCIÓN 2 – POWER BI: Herramientas de Data Viz
+3.1 Importación y Preparación en Power Query- Grafico 7
+Se importó el archivo car_evaluation_new.xlsx y se aplicaron las siguientes configuraciones:
+•	Primera fila como encabezado
+•	Tipos de datos:
+o	Identificador → Número entero
+o	Fecha operación → Fecha
+o	Resto de columnas → Texto
 
-# SECCIÓN 2 – POWER BI
 
 ### 📊 Gráfico 7 – Importación y Preparación en Power Query  
-![Gráfico 7 Importación y Preparación de Power Query](IMG/Gráfico 7 Importación y Preparación de Power Query.png)
+![Gráfico 7 Importación y Preparación de Power Query](img/Grafico 7 Importacion y Preparacion de Power Query.png)
 
----
-
+Transformaciones Solicitadas- Grafico 8
+Se realizaron todas las transformaciones requeridas:
+•	Creación de columna condicional Rng_Precios con los rangos:
+o	vhigh → Más de 50.000 €
+o	high → Entre 30.000 € y 49.999 €
+o	med → Entre 15.000 € y 29.999 €
+o	else → Menos de 14.999 €
+•	Conversión de Tamaño maletero a mayúsculas
+•	Reemplazo de SMALL/MED/BIG por PEQUEÑO/MEDIANO/GRANDE
+•	Extracción del primer dígito en Nº de Puertas
+•	Ocultación de columnas no utilizadas
+•	Renombrado del objeto a HEC_Ventas_Coches
 ### 📊 Gráfico 8 – Transformaciones Solicitadas  
-![Gráfica 8 - Transformaciones Solicitadas](IMG/Gráfica 8 - Transformaciones Solicitadas.png)
+![Gráfica 8 - Transformaciones Solicitadas](img/Grafico 8- Transformaciones Solicitadas.png)
 
----
-
+Creación de Medidas DAX- Grafico 9
+Se creó la tabla TMedidas_Ventas y la medida:
+Num Operaciones = COUNTROWS(HEC_Ventas_Coches)
 ### 📊 Gráfico 9 – Medidas DAX  
-![Grafico 9 - Medidas DAX](IMG/Grafico 9 - Medidas DAX.png)
+![Grafico 9 - Medidas DAX](img/Grafico 9- Medidas DAX.png)
 
----
+Visualizaciones del Dashboard- Grafico 10
+Se generaron las visualizaciones solicitadas:
+•	Ventas por número de puertas
+•	Ventas por tamaño del maletero
+•	Ventas por rango de precios
+Cada visualización fue configurada con:
+•	Títulos
+•	Ejes
+•	Leyendas
+•	Colores
+•	Etiquetas de datos
 
 ### 📊 Gráfico 10 – Visualizaciones del Dashboard  
-![Grafico 10 - Visualizaciones del Dashboard](IMG/Grafico 10 - Visualizaciones del Dashboard.png)
+![Grafico 10 - Visualizaciones del Dashboard](img/Grafico 10- Visualizaciones del Dashboard.png)
+Pruebas con Otros Tipos de Gráficos
+Se probaron visualizaciones alternativas (por ejemplo, gráfico de donut).
+Conclusión:
+Los gráficos circulares no permiten comparar categorías con precisión, mientras que los gráficos de barras ofrecen mayor claridad y legibilidad.
+________________________________________
+3.6 Conclusión de la Sección 2
+Power BI permitió transformar, modelar y visualizar los datos de manera eficiente. Las visualizaciones generadas facilitan la interpretación de patrones de ventas según puertas, maletero y rango de precios. Las transformaciones aplicadas en Power Query fueron esenciales para garantizar la calidad del modelo.
+________________________________________
+•	CONCLUSIÓN GENERAL DEL PROYECTO
+El proyecto integrador permitió aplicar de forma práctica los conocimientos adquiridos en Python y Power BI. La combinación de ambas herramientas facilitó un análisis completo: desde la calidad y preparación de datos hasta la creación de dashboards interactivos. Se reforzaron conceptos clave como limpieza, transformación, 
 
----
 
-# 📁 Estructura del Repositorio
 
-Proyecto-Final---Cars/ │ ├─ IMG/ │ ├─ Gráfico 1 - Ingesta del DAtaset.png │ ├─ Grafico 10 - Visualizaciones del Dashboard.png │ ├─ Grafico 2 Ingesta del Dataset.png │ ├─ Grafico 3 EDA.png │ ├─ Grafico 4 Trasformaciones aplicadas.png │ ├─ Grafico 5 Visualizaciones.png │ ├─ Grafico 6 Visualizaciones.png │ ├─ Gráfico 7 Importación y Preparación de Power Query.png │ ├─ Gráfica 8 - Transformaciones Solicitadas.png │ └─ Grafico 9 - Medidas DAX.png │ ├─ HEC_Ventas_Coches.pbix ├─ ProyectoFinalSeccion1_DahianaZuliani.ipynb └─ README.md
 
----
 
-# 🧩 Conclusión  
-Este proyecto integra análisis exploratorio, limpieza de datos y visualización profesional utilizando **Python** y **Power BI**, permitiendo comprender cómo se relacionan las características de los vehículos con su clasificación y comportamiento general.
+
+
+
+
