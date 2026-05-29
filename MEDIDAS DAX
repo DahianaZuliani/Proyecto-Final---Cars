@@ -1,1 +1,24 @@
+Medidas DAX
+Dahiana Gisselle  Zuliani Quijano
+Herramienta: Power BI
+Tabla de medidas: TMedidas_Ventas
+________________________________________ 1. Medida: Total Operaciones
+Fórmula DAX:
+Total Operaciones = COUNT(HEC_Ventas_Coches[class])
+Esta medida cuenta el número total de operaciones registradas en la tabla HEC_Ventas_Coches, utilizando la columna class, que contiene la clasificación final del vehículo (unacc, acc, good, vgood).
+Dashboard:
+La medida se utilizó como métrica principal en las siguientes visualizaciones:
+•	Ventas por número de puertas
+•	Ventas por tamaño del maletero
+•	Ventas por rango de precios
+Formato aplicado:
+•	Tipo de dato: Número entero
+•	Formato: Separador de miles
+•	Categoría: Ninguna
+________________________________________ 2. Tabla de medidas: TMedidas_Ventas
+Fórmula de creación:
+TMedidas_Ventas = {}
+
+Descripción:
+Esta tabla se creó para organizar todas las medidas DAX del proyecto, siguiendo buenas prácticas de modelado en Power BI.
 
