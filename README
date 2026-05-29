@@ -1,1 +1,69 @@
+# 🚗 Proyecto Final – Análisis y Visualización de Datos de Vehículos  
+Bootcamp Data Analytics – Unicorn Academy  
+Autora: **Dahiana Zuliani**
+
+---
+
+# 🟣 SECCIÓN 1 – PYTHON
+
+## 📊 Gráfico 1 – Ingesta del Dataset  
+![Gráfico 1 - Ingesta del Dataset](IMG/Gráfico 1 - Ingesta del DAtaset.png)
+
+---
+
+## 📊 Gráfico 2 – Ingesta del Dataset (segunda vista)  
+![Grafico 2 Ingesta del Dataset](IMG/Grafico 2 Ingesta del Dataset.png)
+
+---
+
+## 📊 Gráfico 3 – EDA  
+![Grafico 3 EDA](IMG/Grafico 3 EDA.png)
+
+---
+
+## 📊 Gráfico 4 – Transformaciones aplicadas  
+![Grafico 4 Trasformaciones aplicadas](IMG/Grafico 4 Trasformaciones aplicadas.png)
+
+---
+
+## 📊 Gráfico 5 – Visualizaciones  
+![Grafico 5 Visualizaciones](IMG/Grafico 5 Visualizaciones.png)
+
+---
+
+## 📊 Gráfico 6 – Visualizaciones  
+![Grafico 6 Visualizaciones](IMG/Grafico 6 Visualizaciones.png)
+
+---
+
+# 🟡 SECCIÓN 2 – POWER BI
+
+## 📊 Gráfico 7 – Importación y Preparación en Power Query  
+![Gráfico 7 Importación y Preparación de Power Query](IMG/Gráfico 7 Importación y Preparación de Power Query.png)
+
+---
+
+## 📊 Gráfico 8 – Transformaciones Solicitadas  
+![Gráfica 8 - Transformaciones Solicitadas](IMG/Gráfica 8 - Transformaciones Solicitadas.png)
+
+---
+
+## 📊 Gráfico 9 – Medidas DAX  
+![Grafico 9 - Medidas DAX](IMG/Grafico 9 - Medidas DAX.png)
+
+---
+
+## 📊 Gráfico 10 – Visualizaciones del Dashboard  
+![Grafico 10 - Visualizaciones del Dashboard](IMG/Grafico 10 - Visualizaciones del Dashboard.png)
+
+---
+
+# 📁 Estructura del Repositorio
+
+Proyecto-Final---Cars/ │ ├─ IMG/ │ ├─ Gráfico 1 - Ingesta del DAtaset.png │ ├─ Grafico 10 - Visualizaciones del Dashboard.png │ ├─ Grafico 2 Ingesta del Dataset.png │ ├─ Grafico 3 EDA.png │ ├─ Grafico 4 Trasformaciones aplicadas.png │ ├─ Grafico 5 Visualizaciones.png │ ├─ Grafico 6 Visualizaciones.png │ ├─ Gráfico 7 Importación y Preparación de Power Query.png │ ├─ Gráfica 8 - Transformaciones Solicitadas.png │ └─ Grafico 9 - Medidas DAX.png │ ├─ HEC_Ventas_Coches.pbix ├─ ProyectoFinalSeccion1_DahianaZuliani.ipynb └─ README.md
+
+---
+
+# 🧩 Conclusión  
+Este proyecto integra análisis exploratorio, limpieza de datos y visualización profesional utilizando **Python** y **Power BI**, permitiendo comprender cómo se relacionan las características de los vehículos con su clasificación y comportamiento general
 
